@@ -1,13 +1,3 @@
-set(PACKAGE_VERSION "11.0.0git")
-
-# LLVM is API-compatible only with matching major.minor versions
-# and patch versions not less than that requested.
-if("11.0" VERSION_EQUAL
-    "${PACKAGE_FIND_VERSION_MAJOR}.${PACKAGE_FIND_VERSION_MINOR}"
-   AND NOT "0" VERSION_LESS "${PACKAGE_FIND_VERSION_PATCH}")
-  set(PACKAGE_VERSION_COMPATIBLE 1)
-  if("0" VERSION_EQUAL
-      "${PACKAGE_FIND_VERSION_PATCH}")
-    set(PACKAGE_VERSION_EXACT 1)
-  endif()
-endif()
+version https://git-lfs.github.com/spec/v1
+oid sha256:17b50f5d8f7e7ebb79b5e6865a039d2d5a837ecf225b5d485eb26428fd19bc6c
+size 447

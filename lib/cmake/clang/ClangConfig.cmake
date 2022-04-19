@@ -1,25 +1,3 @@
-# This file allows users to call find_package(Clang) and pick up our targets.
-
-
-# Compute the installation prefix from this LLVMConfig.cmake file location.
-get_filename_component(CLANG_INSTALL_PREFIX "${CMAKE_CURRENT_LIST_FILE}" PATH)
-get_filename_component(CLANG_INSTALL_PREFIX "${CLANG_INSTALL_PREFIX}" PATH)
-get_filename_component(CLANG_INSTALL_PREFIX "${CLANG_INSTALL_PREFIX}" PATH)
-get_filename_component(CLANG_INSTALL_PREFIX "${CLANG_INSTALL_PREFIX}" PATH)
-
-find_package(LLVM REQUIRED CONFIG
-             HINTS "${CLANG_INSTALL_PREFIX}/lib/cmake/llvm")
-
-set(CLANG_EXPORTED_TARGETS "clangBasic;clangLex;clangParse;clangAST;clangDynamicASTMatchers;clangASTMatchers;clangCrossTU;clangSema;clangCodeGen;clangAnalysis;clangEdit;clangRewrite;clangDriver;clangSerialization;clangRewriteFrontend;clangFrontend;clangFrontendTool;clangToolingCore;clangToolingInclusions;clangToolingRefactoring;clangToolingASTDiff;clangToolingSyntax;clangDependencyScanning;clangTransformer;clangTooling;clangDirectoryWatcher;clangIndex;clangFormat;clangTesting;diagtool;clang;clang-format;clangHandleCXX;clangHandleLLVM;clang-import-test;clang-offload-bundler;clang-offload-wrapper;clang-scan-deps;clang-rename;clang-refactor;clang-cpp;libclang")
-set(CLANG_CMAKE_DIR "${CLANG_INSTALL_PREFIX}/lib/cmake/clang")
-set(CLANG_INCLUDE_DIRS "${CLANG_INSTALL_PREFIX}/include")
-
-# Provide all our library targets to users.
-include("${CLANG_CMAKE_DIR}/ClangTargets.cmake")
-
-# By creating clang-tablegen-targets here, subprojects that depend on Clang's
-# tablegen-generated headers can always depend on this target whether building
-# in-tree with Clang or not.
-if(NOT TARGET clang-tablegen-targets)
-  add_custom_target(clang-tablegen-targets)
-endif()
+version https://git-lfs.github.com/spec/v1
+oid sha256:d7495a3c0fe98af7b0b19d82bd11d6d990a2a5b0458680426364e9079d5f9ca3
+size 1907

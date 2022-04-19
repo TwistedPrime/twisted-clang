@@ -1,6 +1,3 @@
-set_target_properties(LLVMPolly PROPERTIES
-        IMPORTED_LOCATION_RELEASE ${CMAKE_CURRENT_LIST_DIR}/../../LLVMPolly.so)
-set_target_properties(PollyISL PROPERTIES
-        IMPORTED_LOCATION_RELEASE ${CMAKE_CURRENT_LIST_DIR}/../../libPollyISL.a)
-set_target_properties(Polly PROPERTIES
-        IMPORTED_LOCATION_RELEASE ${CMAKE_CURRENT_LIST_DIR}/../../libPolly.a)
+version https://git-lfs.github.com/spec/v1
+oid sha256:f3194db7aa968aa3d4c68671e33f7697edffbc61ab4bdf45fc7d4ee39b838aa3
+size 741

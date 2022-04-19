@@ -1,17 +1,3 @@
-# There is no clear way of keeping track of compiler command-line
-# options chosen via `add_definitions', so we need our own method for
-# using it on tools/llvm-config/CMakeLists.txt.
-
-# Beware that there is no implementation of remove_llvm_definitions.
-
-macro(add_llvm_definitions)
-  # We don't want no semicolons on LLVM_DEFINITIONS:
-  foreach(arg ${ARGN})
-    if(DEFINED LLVM_DEFINITIONS)
-      set(LLVM_DEFINITIONS "${LLVM_DEFINITIONS} ${arg}")
-    else()
-      set(LLVM_DEFINITIONS ${arg})
-    endif()
-  endforeach(arg)
-  add_definitions( ${ARGN} )
-endmacro(add_llvm_definitions)
+version https://git-lfs.github.com/spec/v1
+oid sha256:4a1143763a328cc575c0d7136411d7a57a042a234245acaadb7eabe08bad3af3
+size 585

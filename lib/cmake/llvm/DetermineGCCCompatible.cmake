@@ -1,13 +1,3 @@
-# Determine if the compiler has GCC-compatible command-line syntax.
-
-if(NOT DEFINED LLVM_COMPILER_IS_GCC_COMPATIBLE)
-  if(CMAKE_COMPILER_IS_GNUCXX)
-    set(LLVM_COMPILER_IS_GCC_COMPATIBLE ON)
-  elseif( MSVC )
-    set(LLVM_COMPILER_IS_GCC_COMPATIBLE OFF)
-  elseif( "${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang" )
-    set(LLVM_COMPILER_IS_GCC_COMPATIBLE ON)
-  elseif( "${CMAKE_CXX_COMPILER_ID}" MATCHES "Intel" )
-    set(LLVM_COMPILER_IS_GCC_COMPATIBLE ON)
-  endif()
-endif()
+version https://git-lfs.github.com/spec/v1
+oid sha256:a163d7c75bcd9694feb57367c962b88a7023cc120a0338383ffc6b2f57cabf38
+size 470
